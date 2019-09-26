@@ -1,6 +1,11 @@
 # Calicobot
 Calicobot is a Python project born out of a beginner-level freeform chatbot task.
 
+## How to execute Calicobot
+
+The main file is calicobot.py.
+Just open the terminal in the files directory and type `python3 calicobot.py`!
+
 ## A little bit about Calicobot
 
 Calicobot is what I consider to be my first real pet project. It all started very modestly as a small self-learning freeform task of creating a little chatbot prototype to apply my fresh knowledge of very simple programming concepts in Python, such as conditions and loops.
