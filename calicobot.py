@@ -80,8 +80,10 @@ def games_menu():
     match choice:
         case "A":
              ttt.start_ttt()
+             games_menu()
         case "B":
              rps.start_rps()
+             games_menu()
         case "C":
              start_menu()
         case _:
