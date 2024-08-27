@@ -1,5 +1,5 @@
 # Calicobot
-Calicobot is a Python project born out of a beginner-level freeform chatbot task.
+Calicobot is a small personal Python project - it was born out of a beginner-level freeform chatbot task, and is slowly evolving into a personal bot that helps me and my partner with simple day-to-day tasks.
 
 ## How to execute Calicobot
 
