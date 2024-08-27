@@ -1,12 +1,13 @@
 # This was done with the help of Al Sweigart's book 'Invent Your
 # Own Computer Games with Python' (Chapter 10).
-
 import random
 import time
+import os
 
 coin = ("tails", "heads")
 
 def ttt_board(position):
+    print("")
     print("+++++++++++++++++")
     print("+               +")
     print("+   "+position[1]+ " | "+position[2]+" | "+position[3]+"   +")
@@ -16,14 +17,19 @@ def ttt_board(position):
     print("+   "+position[7]+ " | "+position[8]+" | "+position[9]+"   +")
     print("+               +")
     print("+++++++++++++++++")
+    print("")
 
 def start_ttt():
+    os.system('clear')
+    print("     x  |\__/| x\n    +  /^  ^ |\n       \_^_   \  +\n     x  /CALICO\ \n")
+    print("")
     print("Sweet! This game is fun!")
     time.sleep(2)
     print("I'm still learning, but I think I'm getting pretty good at it.")
     time.sleep(2)
     print("Alright, this is the board and the positions:")
     time.sleep(1)
+    print("")
     print("+++++++++++++++++")
     print("+               +")
     print("+   1 | 2 | 3   +")
@@ -34,6 +40,7 @@ def start_ttt():
     print("+               +")
     print("+++++++++++++++++")
     time.sleep(2)
+    print("")
     print("When you want to make a move, just type the number of the position you want!")
     time.sleep(3)
     return ttt()
@@ -54,10 +61,13 @@ def win_conditions(position, letter):
 def x_or_o():
     choice = ""
     print("So, you wanna be X or O?")
+    print("")
     choice = input("Your choice: ").lower()
     if choice == "x":
+        print("")
         return ["X", "O"]
     elif choice == "o":
+        print("")
         return ["O", "X"]
     else:
         print("That's not a valid choice! Just type 'x' or 'o'.")
@@ -84,7 +94,9 @@ def move_to_position(board, letter, move):
 def user_turn(board):
     move = " "
     print("It's your turn! What position do you wanna go for?")
+    print("")
     move = input("Your move: ")
+    print("")
     if move not in "1 2 3 4 5 6 7 8 9".split():
         print("That's not a valid position! You need to type a number between 1 and 9.")
         time.sleep(1)
@@ -156,6 +168,7 @@ def tie(board):
 # Function returns True if the player says something like 'yes' or 'yeah'.
 def play_again():
     print("Wanna play again?")
+    print("")
     return input("Your reply: ").lower().startswith("y")
 
 def ttt():
@@ -185,6 +198,7 @@ def ttt():
     game_ongoing = True
     while game_ongoing:
 # The user's turn
+        os.system('clear')
         if turn == "Tails":
             ttt_board(current_board)
             move = user_turn(current_board)
@@ -226,8 +240,11 @@ def ttt():
                     turn = "Tails"
 # Go back to ttt() if the player wants to play again, else quit
     if play_again() == True:
+        os.system('clear')
         return ttt()
     else:
+        os.system('clear')
+        print("     x  |\__/| x\n    +  /^  ^ |\n       \_^_   \  +\n     x  /CALICO\ \n ")
+        print("")
         print("Okay! Thanks for playing with me! This was fun!")
         time.sleep(2)
-        return
