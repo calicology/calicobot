@@ -1,11 +1,15 @@
 import random
 import time
+import os
 
 choices = ("rock", "paper", "scissors")
 
 def start_rps():
     global player_choice
-    print("I love playing this game! Alright!")
+    os.system('clear')
+    print("     x  |\__/| x\n    +  /^  ^ |\n       \_^_   \  +\n     x  /CALICO\ \n")
+    print("")
+    print("Alright!")
     time.sleep(2)
     print("Type \'exit\' at any time to stop the game.")
     time.sleep(1.5)
